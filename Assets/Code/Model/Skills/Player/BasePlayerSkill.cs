@@ -1,5 +1,6 @@
 ﻿using Droids.Behaviour;
 using Droids.Code.Extension;
+using Droids.Handlers;
 using Droids.Model.DataTransfer;
 using System.Collections;
 using UnityEngine;
@@ -23,8 +24,8 @@ namespace Droids.Model.Skills.Player
         protected LayerMask TargetMask => m_targetMask;
 
         public abstract int AnimationId { get; }
-        public abstract bool IsUsable { get; }
 
+        public abstract bool IsUsable(AttacksState state);
         public void Initialize(PlayerBehaviour context) => Context = context;
 
         public abstract IEnumerator Execute();

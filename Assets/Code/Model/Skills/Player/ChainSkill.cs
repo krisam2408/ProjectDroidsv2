@@ -1,4 +1,5 @@
 ﻿using Droids.Behaviour;
+using Droids.Handlers;
 using System.Collections;
 using UnityEngine;
 
@@ -15,15 +16,12 @@ namespace Droids.Model.Skills.Player
 
         public override int AnimationId => 0;
 
-        public override bool IsUsable
+        public override bool IsUsable(AttacksState state)
         {
-            get
-            {
-                bool locked = !Context.Skills.Locked;
-                bool input = Context.Input.Chain.IsPressed;
+            bool locked = !Context.Skills.Locked;
+            bool input = state.Chain.IsPressed;
 
-                return locked && input;
-            }
+            return locked && input;
         }
 
         public override IEnumerator Execute()

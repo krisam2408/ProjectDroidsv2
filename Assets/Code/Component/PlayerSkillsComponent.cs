@@ -1,4 +1,5 @@
 ﻿using Droids.Behaviour;
+using Droids.Handlers;
 using Droids.Model.DataTransfer;
 using Droids.Model.Skills.Player;
 using System.Collections;
@@ -26,9 +27,11 @@ namespace Droids.Component
 
         public BasePlayerSkill CheckSkills()
         {
+            AttacksState state = m_context.Input.GetState();
+
             foreach(BasePlayerSkill skill in m_skills)
             {
-                if (skill.IsUsable)
+                if (skill.IsUsable(state))
                 {
                     if (m_resetRoutine != null)
                         StopCoroutine(m_resetRoutine);

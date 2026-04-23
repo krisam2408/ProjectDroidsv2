@@ -1871,6 +1871,7 @@ MonoBehaviour:
   m_skills:
   - {fileID: 11400000, guid: bc899395d835c654ca5b5c80da9ed0eb, type: 2}
   - {fileID: 11400000, guid: f78f0938e69c70541865ad9b07eaba41, type: 2}
+  - {fileID: 11400000, guid: a2c55e2a6d9038445ade59232d17473c, type: 2}
   m_showGizmos: 0
   m_skill: 0
 --- !u!1 &1675599328
