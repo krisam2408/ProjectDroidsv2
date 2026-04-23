@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 4492d186d135f14448204c266a1bb4e5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1404004075724631867
+    second: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_0
+  - first:
+      213: -5871392058950179977
+    second: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_1
+  - first:
+      213: -7347210969725692152
+    second: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_2
+  - first:
+      213: 1174196222786937980
+    second: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_3
+  - first:
+      213: 2776150394648730392
+    second: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_4
+  - first:
+      213: -5269312944468462828
+    second: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_5
+  - first:
+      213: 3268338293999313537
+    second: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_6
+  - first:
+      213: -2227130585935406554
+    second: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_7
+  - first:
+      213: -4315880068999497990
+    second: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_8
+  - first:
+      213: 7854571969653051446
+    second: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_9
+  - first:
+      213: 8161265423870207988
+    second: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_10
+  - first:
+      213: 9019720889481496040
+    second: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_11
+  - first:
+      213: 5497413775116792472
+    second: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_12
+  - first:
+      213: -1552170325592603530
+    second: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_13
+  - first:
+      213: -6094482254700293108
+    second: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_14
+  - first:
+      213: -718260344154385322
+    second: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 48
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f64c4a4460c7310800000000000000
+      internalID: 1404004075724631867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 48
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 773a935c700a48ea0800000000000000
+      internalID: -5871392058950179977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_2
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 48
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80795abdc86790a90800000000000000
+      internalID: -7347210969725692152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_3
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 48
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7422d35e359b4010800000000000000
+      internalID: 1174196222786937980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_4
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 48
+        width: 52
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81b1914431ed68620800000000000000
+      internalID: 2776150394648730392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_5
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 48
+        width: 50
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 413f6968bc3afd6b0800000000000000
+      internalID: -5269312944468462828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_6
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 48
+        width: 49
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182a2abac587b5d20800000000000000
+      internalID: 3268338293999313537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_7
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 48
+        width: 50
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a99ec2884a711e0800000000000000
+      internalID: -2227130585935406554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 7
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af6b81a91f9ea14c0800000000000000
+      internalID: -4315880068999497990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_9
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 7
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63019e1579b010d60800000000000000
+      internalID: 7854571969653051446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_10
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 7
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f7267ba9a3a24170800000000000000
+      internalID: 8161265423870207988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_11
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 7
+        width: 50
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e507b64c5c7c2d70800000000000000
+      internalID: 9019720889481496040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_12
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 7
+        width: 55
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 892fc21b3bcba4c40800000000000000
+      internalID: 5497413775116792472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_13
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 7
+        width: 54
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67486280055957ae0800000000000000
+      internalID: -1552170325592603530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_14
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 7
+        width: 52
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04daa6edac0c6ba0800000000000000
+      internalID: -6094482254700293108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_15
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 7
+        width: 47
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6549d62c50a3806f0800000000000000
+      internalID: -718260344154385322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_0: 1404004075724631867
+      Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_1: -5871392058950179977
+      Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_10: 8161265423870207988
+      Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_11: 9019720889481496040
+      Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_12: 5497413775116792472
+      Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_13: -1552170325592603530
+      Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_14: -6094482254700293108
+      Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_15: -718260344154385322
+      Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_2: -7347210969725692152
+      Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_3: 1174196222786937980
+      Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_4: 2776150394648730392
+      Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_5: -5269312944468462828
+      Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_6: 3268338293999313537
+      Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_7: -2227130585935406554
+      Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_8: -4315880068999497990
+      Game Boy Advance - Mega Man Zero - Enemies - Pantheon Warrior_9: 7854571969653051446
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
