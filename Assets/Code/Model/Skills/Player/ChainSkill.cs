@@ -27,10 +27,18 @@ namespace Droids.Model.Skills.Player
         public override IEnumerator Execute()
         {
             m_elapsedTime = 0f;
+
+            Vector3 vector = new(Context.Input.Move.X, Context.Input.Move.Y);
+            Vector3[]? positions = Context.SetChainFiringSpot(vector);
+
+            if(positions == null)
+            {
+                yield break;
+            }
+
             Context.Skills.Locked = true;
             Context.Controller.CanMove = false;
-            Vector3 vector = new(Context.Input.Move.X, Context.Input.Move.Y);
-            Vector3[] positions = Context.SetChainFiringSpot(vector.x, vector.y);
+
             ChainPointBehaviour chain = Instantiate<ChainPointBehaviour>(m_point, positions[1], Quaternion.identity);
             chain.Direction = positions[0];
             chain.TargetLayers = TargetMask;

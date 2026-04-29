@@ -41,6 +41,7 @@ namespace Droids.StateMachine.Player
         {
             Context.AppliedY = 0f;
             Context.Animator.Grounded.Value = true;
+            Context.Animator.Jumping.Value = false;
             Context.Animator.Hung.Value = false;
             Context.Controller.CanMove = true;
         }

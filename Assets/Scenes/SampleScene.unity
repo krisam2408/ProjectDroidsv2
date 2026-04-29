@@ -1823,8 +1823,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBehaviour
   m_runFactor: 7
-  m_pullFactor: 10
-  m_pullProximity: 1.3
+  m_pullFactor: 7.4
+  m_pullProximity: 1.54
   m_jumpParams:
     AirTime: 10
     Height: 64

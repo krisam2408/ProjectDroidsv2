@@ -65,7 +65,6 @@ namespace Droids.Component
 
         private WaitForSeconds m_enableToggleWait = new(0.3f);
 
-        #region Boxes
         private Square BottomBox => new(transform.position.ToVector2() + m_bottomOffset, m_bottomExtents);
 
         private Square TopLeftBox => new(
@@ -129,7 +128,6 @@ namespace Droids.Component
                 m_rect.y * 0.5f + m_origin.y + m_sideWidth
             ),
             new Vector2(m_rect.x * 0.5f, m_sideWidth));
-        #endregion
 
         private void FixedUpdate()
         {
@@ -226,23 +224,23 @@ namespace Droids.Component
         {
             m_collision &= ~CollisionChecker.Left;
 
-            int top = Physics2D.OverlapAreaAll(TopLeftBox.TopRight, TopLeftBox.BottomLeft, m_groundDetection).Length;
-            int middle = Physics2D.OverlapAreaAll(MiddleLeftBox.TopRight, MiddleLeftBox.BottomLeft, m_groundDetection).Length;
-            int bottom = Physics2D.OverlapAreaAll(BottomLeftBox.TopRight, BottomLeftBox.BottomLeft, m_groundDetection).Length;
+            Collider2D top = Physics2D.OverlapArea(TopLeftBox.TopRight, TopLeftBox.BottomLeft, m_groundDetection);
+            Collider2D middle = Physics2D.OverlapArea(MiddleLeftBox.TopRight, MiddleLeftBox.BottomLeft, m_groundDetection);
+            Collider2D bottom = Physics2D.OverlapArea(BottomLeftBox.TopRight, BottomLeftBox.BottomLeft, m_groundDetection);
             
-            if (middle > 0)
+            if (top != null || middle != null || bottom != null)
                 m_collision |= CollisionChecker.Left;
 
             CanWallGripLeft = false;
             CanHangLeft = false;
 
-            if (top > 0 && middle > 0 && bottom > 0)
+            if (top != null && middle != null && bottom != null)
             {
                 CanWallGripLeft = true;
                 return;
             }
 
-            if (top > 0 && middle == 0)
+            if (top != null && middle == null)
                 CanHangLeft = true;
         }
 

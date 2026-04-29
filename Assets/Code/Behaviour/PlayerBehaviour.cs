@@ -69,35 +69,40 @@ namespace Droids.Behaviour
             m_controller.Move(vector);
         }
 
-        public Vector3[] SetChainFiringSpot(float x, float y)
+        public Vector3[]? SetChainFiringSpot(Vector2 vector)
         {
-            Vector3[] result;
-            Vector3 input = new(x, y);
-            if(input == Vector3.zero)
-            {
-                if (XFlipped)
-                {
-                    result = new Vector3[]
-                    {
-                        Vector3.left,
-                        transform.position + m_topAltitude * Vector3.up + m_radius * Vector3.left
-                    };
-                    return result;
-                }
+            Vector3 input = new(vector.x, vector.y);
+            Vector3[] vectors = CalculateChainFiringSpot(input);
 
-                result = new Vector3[]
-                {
-                    Vector3.right,
-                    transform.position + m_topAltitude * Vector3.up + m_radius * Vector3.right
-                };
-                return result;
+            if(m_controller.Collisions.HasFlag(CollisionChecker.Left) && vectors[0].x < 0f)
+            {
+                return null;
             }
 
+            if(m_controller.Collisions.HasFlag(CollisionChecker.Right) && vectors[0].x > 0f)
+            {
+                return null;
+            }
+
+            if(m_controller.Collisions.HasFlag(CollisionChecker.Bottom) && vectors[0].y < 0f)
+            {
+                return null;
+            }
+
+            return vectors;
+        }
+
+        private Vector3[] CalculateChainFiringSpot(Vector2 input)
+        {
+            if(input == Vector2.zero)
+                return GetInputZeroFiringPoint();
+
+            Vector3[] result;
             Vector3 startPosition;
             Vector3 addPosition;
             Vector3 normal = input.normalized;
 
-            if (y < 0)
+            if (input.y < 0)
             {
                 startPosition = transform.position + m_bottomAltitude * Vector3.up;
                 addPosition = m_radius * input;
@@ -120,6 +125,28 @@ namespace Droids.Behaviour
                     startPosition + addPosition
             };
 
+            return result;
+        }
+
+        private Vector3[] GetInputZeroFiringPoint()
+        {
+            Vector3[] result;
+
+            if (XFlipped)
+            {
+                result = new Vector3[]
+                {
+                    Vector3.left,
+                    transform.position + m_topAltitude * Vector3.up + m_radius * Vector3.left
+                };
+                return result;
+            }
+
+            result = new Vector3[]
+            {
+                Vector3.right,
+                transform.position + m_topAltitude * Vector3.up + m_radius * Vector3.right
+            };
             return result;
         }
 
@@ -189,7 +216,7 @@ namespace Droids.Behaviour
             Gizmos.DrawWireSphere(bottomPosition, m_radius);
 
             Gizmos.color = Color.blue;
-            Vector3 firingPosition = SetChainFiringSpot(m_virtualX, m_virtualY)[1];
+            Vector3 firingPosition = SetChainFiringSpot(new Vector2(m_virtualX, m_virtualY))[1];
             Gizmos.DrawSphere(firingPosition, m_circleRadius);
         }
 #endif

@@ -18,5 +18,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4288
   m_point: {fileID: 922213343258094312, guid: 062b5ec8cacb6a846977bdf237b82e10, type: 3}
-  m_time: 1.6
+  m_time: 0.96
   m_damage: 2
