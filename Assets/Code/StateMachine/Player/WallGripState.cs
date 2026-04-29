@@ -27,7 +27,7 @@ namespace Droids.StateMachine.Player
         public override void EnterState()
         {
             Context.WallGripped = true;
-            Context.Animator.WallGrip.Value = true;
+            Context.Animator.WallGrip.Play();
             Context.Controller.CanMove = false;
             Context.AppliedX = 0f;
             Context.AppliedY = 0f;
@@ -36,7 +36,6 @@ namespace Droids.StateMachine.Player
         public override void ExitState()
         {
             Context.WallGripped = false;
-            Context.Animator.WallGrip.Value = false;
             Context.Controller.CanMove = true;
         }
     }

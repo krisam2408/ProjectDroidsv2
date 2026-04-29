@@ -5,7 +5,7 @@ using Droids.Model.DataTransfer;
 using System.Collections;
 using UnityEngine;
 
-namespace Droids.Model.Skills.Player
+namespace Droids.Skills.Player
 {
     public abstract class BasePlayerSkill : ScriptableObject
     {
@@ -26,7 +26,7 @@ namespace Droids.Model.Skills.Player
         public abstract int AnimationId { get; }
 
         public abstract bool IsUsable(AttacksState state);
-        public void Initialize(PlayerBehaviour context) => Context = context;
+        public virtual void Initialize(PlayerBehaviour context) => Context = context;
 
         public abstract IEnumerator Execute();
         

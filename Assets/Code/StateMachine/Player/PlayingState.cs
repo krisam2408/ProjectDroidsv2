@@ -1,6 +1,6 @@
-﻿using Droids.Behaviour;
+﻿using Droids.Skills.Player;
+using Droids.Behaviour;
 using Droids.Model.DataTransfer;
-using Droids.Model.Skills.Player;
 using System;
 using UnityEngine;
 

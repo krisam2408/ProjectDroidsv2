@@ -4,7 +4,7 @@ namespace Droids.Facade.Animation
 {
     public sealed class FloatParameter : Parameter<float>
     {
-        public FloatParameter(Animator[] animators, string boolean) : base(animators, boolean) { }
+        public FloatParameter(Animator animator, string name) : base(animator, name) { }
 
         protected override void SetAction(Animator animator, float value)
         {

@@ -21,8 +21,7 @@ namespace Droids.StateMachine.Player
 
         public override void EnterState()
         {
-            Context.Animator.Grounded.Value = false;
-            Context.Animator.WallGrip.Value = false;
+            Context.Animator.Fall.Play();
         }
 
         public override void UpdateState()

@@ -1,11 +1,13 @@
 ﻿using Droids.Behaviour;
+using Droids.Facade.Animation;
 using Droids.Handlers;
+using Droids.Model;
 using Droids.Model.DataTransfer;
 using System;
 using System.Collections;
 using UnityEngine;
 
-namespace Droids.Model.Skills.Player
+namespace Droids.Skills.Player
 {
     [CreateAssetMenu(fileName = "tripleSlash.asset", menuName = "Player Skills/Triple Slash")]
     public sealed class TripleSlashSkill : BasePlayerSkill
@@ -29,6 +31,19 @@ namespace Droids.Model.Skills.Player
             }
         }
 
+        private AnimationHandler[] m_animations;
+
+        public override void Initialize(PlayerBehaviour context)
+        {
+            base.Initialize(context);
+            m_animations = new AnimationHandler[3]
+            {
+                Context.Animator.Slash1,
+                Context.Animator.Slash2,
+                Context.Animator.Slash3,
+            };
+        }
+
         public override bool IsUsable(AttacksState state)
         {
             bool locked = !Context.Skills.Locked;
@@ -47,9 +62,8 @@ namespace Droids.Model.Skills.Player
 
             Context.Skills.Locked = true;
             Context.Controller.CanMove = false;
-            Context.Animator.SkillId.Value = AnimationId;
-            Context.Animator.Iteration.Value = Iteration;
-            Context.Animator.Execute.Value = true;
+
+            m_animations[Iteration - 1].Play();
 
             Iteration++;
 

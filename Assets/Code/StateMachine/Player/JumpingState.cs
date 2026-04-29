@@ -34,7 +34,7 @@ namespace Droids.StateMachine.Player
         public override void EnterState()
         {
             HandleJump(Context.Gravities.InitialJumpForce);
-            Context.Animator.Jumping.Value = true;
+            Context.Animator.Jump.Play();
         }
 
         public override void FixedUpdateState()
@@ -44,7 +44,7 @@ namespace Droids.StateMachine.Player
 
         public override void ExitState()
         {
-            Context.Animator.Jumping.Value = false;
+
         }
 
         private void HandleJump(float force)

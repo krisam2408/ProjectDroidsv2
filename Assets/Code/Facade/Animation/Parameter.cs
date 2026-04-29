@@ -5,7 +5,7 @@ namespace Droids.Facade.Animation
 {
     public abstract class Parameter<T>
     {
-        protected readonly Animator[] m_animators;
+        protected readonly Animator m_animator;
 
         private readonly int[] m_hashes;
         protected int[] Hashes => m_hashes;
@@ -17,14 +17,13 @@ namespace Droids.Facade.Animation
             set 
             {
                 m_value = value;
-                foreach (Animator anim in m_animators)
-                    SetAction(anim, value);
+                SetAction(m_animator, value);
             }
         }
 
-        protected Parameter(Animator[] animators, params string[] parameters)
+        protected Parameter(Animator animator, params string[] parameters)
         {
-            m_animators = animators;
+            m_animator = animator;
 
             m_hashes = parameters
                 .Select(p => Animator.StringToHash(p))

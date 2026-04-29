@@ -27,7 +27,7 @@ namespace Droids.StateMachine.Player
         public override void EnterState()
         {
             Context.Skills.Locked = true;
-            Context.Animator.Climb.Value = true;
+            Context.Animator.Climb.Play();
             m_bounds = Context.Controller.StartClimb();
             Context.StartCoroutine(Wait());
         }
@@ -44,7 +44,6 @@ namespace Droids.StateMachine.Player
         {
             m_bounds = null;
             Context.Skills.Locked = false;
-            Context.Animator.Hung.Value = false;
             Context.Controller.CanMove = true;
         }
 

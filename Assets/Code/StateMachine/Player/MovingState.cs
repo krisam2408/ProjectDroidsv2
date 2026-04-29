@@ -36,7 +36,6 @@ namespace Droids.StateMachine.Player
 
         public override void EnterState()
         {
-            Context.Animator.Moving.Value = true;
         }
 
         public override void UpdateState()
@@ -50,7 +49,7 @@ namespace Droids.StateMachine.Player
 
         public override void ExitState()
         {
-            Context.Animator.Moving.Value = false;
+            
         }
 
         private void HandleSpriteDirection()

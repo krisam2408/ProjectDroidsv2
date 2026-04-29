@@ -40,9 +40,6 @@ namespace Droids.StateMachine.Player
         public override void EnterState()
         {
             Context.AppliedY = 0f;
-            Context.Animator.Grounded.Value = true;
-            Context.Animator.Jumping.Value = false;
-            Context.Animator.Hung.Value = false;
             Context.Controller.CanMove = true;
         }
 
@@ -51,12 +48,13 @@ namespace Droids.StateMachine.Player
             if (CheckSwitch())
                 return;
 
+            HandleMovementeAnimation();
             HandleBottomPassThrough();
         }
 
         public override void ExitState()
         {
-            Context.Animator.Grounded.Value = false;
+
         }
 
         private void HandleBottomPassThrough()
@@ -67,6 +65,20 @@ namespace Droids.StateMachine.Player
             {
                 Context.Controller.DisableCollisionToggle(CollisionChecker.Bottom);
             }
+        }
+
+        public void HandleMovementeAnimation()
+        {
+            if (Context.Skills.Locked)
+                return;
+
+            if (Context.AppliedX != 0f)
+            {
+                Context.Animator.Move.Play();
+                return;
+            }
+
+            Context.Animator.Idle.Play();
         }
     }
 }

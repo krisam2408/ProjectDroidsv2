@@ -32,7 +32,7 @@ namespace Droids.StateMachine.Player
 
         public override void EnterState()
         {
-            Context.Animator.Hung.Value  = true;
+            Context.Animator.Hung.Play();
             Context.Controller.CanMove = false;
             Context.AppliedX = 0f;
             Context.AppliedY = 0f;

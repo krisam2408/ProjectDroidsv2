@@ -3,7 +3,7 @@ using Droids.Handlers;
 using System.Collections;
 using UnityEngine;
 
-namespace Droids.Model.Skills.Player
+namespace Droids.Skills.Player
 {
     [CreateAssetMenu(fileName = "chainSkill.asset", menuName = "Player Skills/Chain Skill")]
     public sealed class ChainSkill : BasePlayerSkill

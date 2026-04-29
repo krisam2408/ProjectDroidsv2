@@ -1,7 +1,7 @@
-﻿using Droids.Behaviour;
+﻿using Droids.Skills.Player;
+using Droids.Behaviour;
 using Droids.Handlers;
 using Droids.Model.DataTransfer;
-using Droids.Model.Skills.Player;
 using System.Collections;
 using UnityEngine;
 
@@ -47,9 +47,6 @@ namespace Droids.Component
         private IEnumerator ResetRoutine()
         {
             yield return m_resetWait;
-            m_context.Animator.SkillId.Value = 0;
-            m_context.Animator.Iteration.Value = 0;
-            m_context.Animator.Execute.Value = false;
             m_context.Animator.Finish.Value = false;
         }
 

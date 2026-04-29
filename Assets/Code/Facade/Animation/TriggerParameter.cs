@@ -4,7 +4,7 @@ namespace Droids.Facade.Animation
 {
     public sealed class TriggerParameter : Parameter<bool>
     {
-        public TriggerParameter(Animator[] animators, string boolean) : base(animators, boolean) { }
+        public TriggerParameter(Animator animator, string name) : base(animator, name) { }
 
         protected override void SetAction(Animator animator, bool value)
         {

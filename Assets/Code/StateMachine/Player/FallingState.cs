@@ -43,9 +43,7 @@ namespace Droids.StateMachine.Player
 
         public override void EnterState()
         {
-            Context.Animator.Jumping.Value = false;
-            Context.Animator.WallGrip.Value = false;
-            Context.Animator.Hung.Value = false;
+            Context.Animator.Fall.Play();
             Context.Controller.CanMove = true;
 
             if (m_interrupt)

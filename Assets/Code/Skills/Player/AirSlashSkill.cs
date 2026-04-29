@@ -1,11 +1,12 @@
 ﻿using Droids.Behaviour;
 using Droids.Handlers;
+using Droids.Model;
 using Droids.Model.DataTransfer;
 using System;
 using System.Collections;
 using UnityEngine;
 
-namespace Droids.Model.Skills.Player
+namespace Droids.Skills.Player
 {
     [CreateAssetMenu(fileName = "airSlash.asset", menuName = "Player Skills/Air Slash")]
     public sealed class AirSlashSkill : BasePlayerSkill
@@ -27,8 +28,7 @@ namespace Droids.Model.Skills.Player
         public override IEnumerator Execute()
         {
             Context.Skills.Locked = true;
-            Context.Animator.SkillId.Value = AnimationId;
-            Context.Animator.Execute.Value = true;
+            Context.Animator.AirSlash.Play();
 
             yield return new WaitForSeconds(m_animationTime * 0.5f);
 
