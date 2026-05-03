@@ -7,7 +7,6 @@ namespace Droids.Behaviour
     public sealed class ChainPointBehaviour : MonoBehaviour
     {
         [Header("Behaviour")]
-        [SerializeField] private float m_speedFactor = 10f;
         [SerializeField] private Vector2 m_direction = Vector2.right;
 
         [Header("Collision")]
@@ -20,6 +19,8 @@ namespace Droids.Behaviour
 
         private Vector2 m_startPosition;
         private bool m_messageSent = false;
+
+        public float SpeedFactor { get; set; }
 
         public Vector2 Direction
         {
@@ -40,7 +41,7 @@ namespace Droids.Behaviour
 
         private void Update()
         {
-            transform.Translate(m_speedFactor * Time.deltaTime * m_direction, Space.World);
+            transform.Translate(SpeedFactor * Time.deltaTime * m_direction, Space.World);
             m_line.SetPosition(1, transform.position);
             
         }

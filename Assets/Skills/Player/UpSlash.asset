@@ -9,13 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b4bc548233d5a949a362a95fca5163d, type: 3}
-  m_Name: AirSlash
-  m_EditorClassIdentifier: Assembly-CSharp::Droids.Model.Skills.Player.AirSlashSkill
-  m_areaExtents: {x: 0.51, y: 0.55}
-  m_areaOffset: {x: 1.02, y: 0.45}
+  m_Script: {fileID: 11500000, guid: dd814b69ef0fbe5488ad377d9abd0e7b, type: 3}
+  m_Name: UpSlash
+  m_EditorClassIdentifier: Assembly-CSharp::Droids.Skills.Player.UpSlashSkill
+  m_areaExtents: {x: 0.61, y: 0.9}
+  m_areaOffset: {x: 1.06, y: 0.91}
   m_targetMask:
     serializedVersion: 2
     m_Bits: 4096
-  m_damage: 3
-  m_animationTime: 0.25
+  m_damage: 4
+  m_delayTime: 0.25
+  m_animationTime: 0.58
+  m_height: 11.91

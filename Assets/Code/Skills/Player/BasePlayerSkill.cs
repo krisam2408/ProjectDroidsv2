@@ -23,8 +23,6 @@ namespace Droids.Skills.Player
         protected PlayerBehaviour Context { get; private set; }
         protected LayerMask TargetMask => m_targetMask;
 
-        public abstract int AnimationId { get; }
-
         public abstract bool IsUsable(AttacksState state);
         public virtual void Initialize(PlayerBehaviour context) => Context = context;
 

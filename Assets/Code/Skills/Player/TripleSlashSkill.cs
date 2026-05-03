@@ -16,8 +16,6 @@ namespace Droids.Skills.Player
         [SerializeField] private float m_animationTime;
         [SerializeField] private float m_resetTime;
 
-        public override int AnimationId => 1;
-
         private int m_iteration = 1;
         private int Iteration
         {
@@ -75,10 +73,8 @@ namespace Droids.Skills.Player
 
             Context.Skills.Locked = false;
             Context.Controller.CanMove = true;
-            Context.Animator.Finish.Value = true;
 
             m_resetRoutine = Context.StartCoroutine(ResetIteration());
-            Context.Skills.ResetSkill();
         }
 
         private void DoDamage()

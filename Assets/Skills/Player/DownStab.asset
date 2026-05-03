@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b4bc548233d5a949a362a95fca5163d, type: 3}
-  m_Name: AirSlash
-  m_EditorClassIdentifier: Assembly-CSharp::Droids.Model.Skills.Player.AirSlashSkill
-  m_areaExtents: {x: 0.51, y: 0.55}
-  m_areaOffset: {x: 1.02, y: 0.45}
+  m_Script: {fileID: 11500000, guid: cda2a62b772880141bd10d7bd1fcdd0e, type: 3}
+  m_Name: DownStab
+  m_EditorClassIdentifier: Assembly-CSharp::Droids.Skills.Player.DownStabSkill
+  m_areaExtents: {x: 0.27, y: 0.39}
+  m_areaOffset: {x: 0.18, y: -0.21}
   m_targetMask:
     serializedVersion: 2
-    m_Bits: 4096
-  m_damage: 3
+    m_Bits: 0
+  m_damage: 5
   m_animationTime: 0.25

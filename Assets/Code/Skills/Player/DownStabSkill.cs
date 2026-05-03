@@ -8,25 +8,26 @@ using UnityEngine;
 
 namespace Droids.Skills.Player
 {
-    [CreateAssetMenu(fileName = "airSlash.asset", menuName = "Player Skills/Air Slash")]
-    public sealed class AirSlashSkill : BasePlayerSkill
+    [CreateAssetMenu(fileName = "downStab.asset", menuName = "Player Skills/Down Stab")]
+    public sealed class DownStabSkill : BasePlayerSkill
     {
-        [SerializeField] private int m_damage = 3;
-        [SerializeField] private float m_animationTime;
+        [SerializeField] private int m_damage = 5;
+        [SerializeField] private float m_animationTime = 0.25f;
 
         public override bool IsUsable(AttacksState state)
         {
             bool locked = !Context.Skills.Locked;
             bool grounded = !Context.Controller.Collisions.HasFlag(CollisionChecker.Bottom);
             bool input = state.Slash.IsPressed;
+            bool down = Context.Input.Move.Y < 0;
 
-            return locked && grounded && input;
+            return locked && grounded && down && input;
         }
 
         public override IEnumerator Execute()
         {
             Context.Skills.Locked = true;
-            Context.Animator.AirSlash.Play();
+            Context.Animator.DownStab.Play();
 
             yield return new WaitForSeconds(m_animationTime * 0.5f);
 

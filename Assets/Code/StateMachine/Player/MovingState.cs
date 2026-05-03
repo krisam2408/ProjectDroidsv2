@@ -43,7 +43,7 @@ namespace Droids.StateMachine.Player
             if (CheckSwitch())
                 return;
 
-            Context.AppliedX = Context.Input.Move.X;
+            Context.AppliedX = Context.Input.Move.X * Context.RunFactor;
             HandleSpriteDirection();
         }
 

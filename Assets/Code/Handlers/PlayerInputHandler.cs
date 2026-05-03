@@ -1,4 +1,5 @@
 ﻿using Droids.Facade.Input;
+using UnityEngine;
 
 namespace Droids.Handlers
 {
@@ -13,12 +14,14 @@ namespace Droids.Handlers
 
         public AttacksState GetState()
         {
-            return new()
+            AttacksState state = new()
             {
                 Slash = Slash.GetState(),
                 Stab = Stab.GetState(),
                 Chain = Chain.GetState()
             };
+
+            return state;
         }
     }
 

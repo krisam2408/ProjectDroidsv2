@@ -22,12 +22,13 @@ namespace Droids.Behaviour
         [SerializeField] private float m_bottomAltitude;
         [SerializeField] private float m_radius;
 
-        [Header("Components")]
+        [Header("References")]
         [SerializeField] private CharacterControllerComponent m_controller;
         [SerializeField] private SpriteRenderer m_spriteRenderer;
-        [SerializeField] private Animator m_spriteAnimator;
+        [SerializeField] private Animator m_animator;
         [SerializeField] private PlayerSkillsComponent m_skills;
 
+        public float RunFactor => m_runFactor;
         public float PullFactor => m_pullFactor;
         public float PullProximity => m_pullProximity;
         public GravityData JumpParams => m_jumpParams;
@@ -62,7 +63,7 @@ namespace Droids.Behaviour
 
         public void Move()
         {
-            float x = m_runFactor * AppliedX * Time.deltaTime;
+            float x = AppliedX * Time.deltaTime;
             float y = AppliedY * Time.deltaTime;
             
             Vector2 vector = new(x, y);
@@ -105,7 +106,7 @@ namespace Droids.Behaviour
             if (input.y < 0)
             {
                 startPosition = transform.position + m_bottomAltitude * Vector3.up;
-                addPosition = m_radius * input;
+                addPosition = m_radius * normal;
 
                 result = new Vector3[]
                 {
@@ -117,12 +118,12 @@ namespace Droids.Behaviour
             }
 
             startPosition = transform.position + m_topAltitude * Vector3.up;
-            addPosition = m_radius * input;
+            addPosition = m_radius * normal;
 
             result = new Vector3[]
             {
-                    normal,
-                    startPosition + addPosition
+                normal,
+                startPosition + addPosition
             };
 
             return result;
@@ -152,7 +153,7 @@ namespace Droids.Behaviour
 
         private void Awake()
         {
-            Animator = new(m_spriteAnimator);
+            Animator = new(m_animator);
             CurrentState = new PlayingState(this);
         }
 

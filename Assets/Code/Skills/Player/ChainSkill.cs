@@ -9,12 +9,11 @@ namespace Droids.Skills.Player
     public sealed class ChainSkill : BasePlayerSkill
     {
         [SerializeField] private ChainPointBehaviour m_point;
+        [SerializeField] private float m_speedFactor = 14f;
         [SerializeField] private float m_time;
         [SerializeField] private int m_damage = 2;
 
         private float m_elapsedTime = 0f;
-
-        public override int AnimationId => 0;
 
         public override bool IsUsable(AttacksState state)
         {
@@ -40,6 +39,7 @@ namespace Droids.Skills.Player
             Context.Controller.CanMove = false;
 
             ChainPointBehaviour chain = Instantiate<ChainPointBehaviour>(m_point, positions[1], Quaternion.identity);
+            chain.SpeedFactor = m_speedFactor;
             chain.Direction = positions[0];
             chain.TargetLayers = TargetMask;
             chain.Damage = m_damage;
@@ -52,10 +52,8 @@ namespace Droids.Skills.Player
             }
 
             Destroy(chain.gameObject);
+            Context.Controller.CanMove = true;
             Context.Skills.Locked = false;
-            
-            if(!Context.WallGripped)
-                Context.Controller.CanMove = true;
         }
     }
 }

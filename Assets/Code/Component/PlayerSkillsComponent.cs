@@ -42,14 +42,6 @@ namespace Droids.Component
             return null;
         }
 
-        public void ResetSkill() => m_resetRoutine = StartCoroutine(ResetRoutine());
-        
-        private IEnumerator ResetRoutine()
-        {
-            yield return m_resetWait;
-            m_context.Animator.Finish.Value = false;
-        }
-
 #if UNITY_EDITOR
         [SerializeField] private bool m_showGizmos;
         [SerializeField] private int m_skill;

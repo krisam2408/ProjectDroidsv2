@@ -16,8 +16,8 @@ namespace Droids.Handlers
         public AnimationHandler Slash2 { get; private set; }
         public AnimationHandler Slash3 { get; private set; }
         public AnimationHandler AirSlash { get; private set; }
-
-        public TriggerParameter Finish { get; private set; }
+        public AnimationHandler UpSlash { get; private set; }
+        public AnimationHandler DownStab { get; private set; }
 
         public PlayerAnimatorHandler(Animator sprite)
         {
@@ -34,8 +34,8 @@ namespace Droids.Handlers
             Slash2 = new($"{prefix}Slash2", sprite);
             Slash3 = new($"{prefix}Slash3", sprite);
             AirSlash = new($"{prefix}AirSlash", sprite);
-
-            Finish = new(sprite, "Finish");
+            UpSlash = new($"{prefix}UpSlash", sprite);
+            DownStab = new($"{prefix}DownStab", sprite);
         }
     }
 }
